@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-
+from time import sleep
 
 bot = commands.Bot(command_prefix="-")
 bot.remove_command("help")
@@ -18,10 +18,13 @@ async def on_message(message):
           await message.channel.send(embed=embed)
           await message.delete()
 
-      elif 0<=len(message.content)<=8:
-          await message.delete()
+
   elif  message.channel.id ==1000467738738823319 and message.author!=bot.user:
     await message.delete()
+    await message.send("-suggest <your suggestion>")
+    sleep(3)
+    await bot.delete_message(message)
+    
 
 
 

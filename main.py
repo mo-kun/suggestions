@@ -21,9 +21,9 @@ async def on_message(message):
 
   elif  message.channel.id ==1000467738738823319 and message.author!=bot.user:
     await message.delete()
-    await message.channel.send("-suggest <your suggestion>")
+    x = await message.channel.send("-suggest <your suggestion>")
     sleep(3)
-    await bot.delete_message(message)
+    await bot.delete_message(x)
     
 
 

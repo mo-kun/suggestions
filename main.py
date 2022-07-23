@@ -20,6 +20,8 @@ async def on_message(message):
       
       elif 0<=len(message.content)<=8:
           await message.delete()
+  elif  message.channel.id ==999823889653846060:
+    await message.delete()
 
 
 

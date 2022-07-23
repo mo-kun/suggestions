@@ -18,7 +18,7 @@ async def on_message(message):
           title="suggestion made by "+message.author.name,  description=message.content[9:], color = 0xf1c40f) 
           await message.channel.send(embed=embed)
       
-      elif len(message.content)==8:
+      elif 0<=len(message.content)<=8:
           await message.delete()
 
 

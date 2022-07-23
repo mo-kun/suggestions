@@ -11,8 +11,8 @@ my_secret = "MTAwMDQyMzE5NDI5MDgxNTE4MA.GEnyJs.WVb_MyArpE8387RUNa2IIIjJeB2lSua1H
 
 @bot.listen()
 async def on_message(message):
-  if message.channel.id ==1000467738738823319 and message.content.startswith("-suggest ") and message.author!=bot.user : 
-      if  len(message.content)>8:
+  if message.channel.id ==1000467738738823319 and message.content.startswith("-suggest ") : 
+      if  len(message.content)>8 and message.author!=bot.user:
           embed = discord.Embed(    
           title="suggestion made by "+message.author.name,  description=message.content[9:], color = 0xf1c40f) 
           await message.channel.send(embed=embed)
@@ -21,11 +21,13 @@ async def on_message(message):
 
   elif  message.channel.id ==1000467738738823319 and message.author!=bot.user:
     await message.delete()
-    x = await message.channel.send("-suggest <your suggestion>")
-    sleep(3)
-    await bot.delete_message(x)
+    await message.channel.send("-suggest <your suggestion>")
     
-
+    
+  
+  if message.content=="-suggest <your suggestion>":
+    sleep(3)
+    await bot.delete_message(message)
 
 
 

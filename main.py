@@ -27,7 +27,7 @@ async def on_message(message):
   
   if message.content=="-suggest <your suggestion>":
     sleep(3)
-    await bot.delete_message(message)
+    await message.delete()
 
 
 

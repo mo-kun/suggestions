@@ -5,7 +5,7 @@ from time import sleep
 bot = commands.Bot(command_prefix="-")
 bot.remove_command("help")
 
-my_secret = "MTAwMDQyMzE5NDI5MDgxNTE4MA.GEnyJs.WVb_MyArpE8387RUNa2IIIjJeB2lSua1HiQBtw"
+my_secret = "MTAwMDQyMzE5NDI5MDgxNTE4MA.Gzwyob.vqZY4ZADJu87g-Z36mdezrPIdz2HElLbkxVYnM"
 
 
 
